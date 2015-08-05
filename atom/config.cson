@@ -1,0 +1,14 @@
+"*":
+  welcome:
+    showOnStartup: false
+  core:
+    disabledPackages: [
+      "metrics"
+    ]
+  editor:
+    softWrap: true
+  "atom-beautify":
+    analytics: false
+    html_end_with_newline: true
+    js_end_with_newline: true
+

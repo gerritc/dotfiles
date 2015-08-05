@@ -14,6 +14,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   cp -f $SRC_DIR/gitconfig $TARGET_DIR/.gitconfig
   cp -f $SRC_DIR/vimrc $TARGET_DIR/.vimrc
   cp -f $SRC_DIR/bash_profile $TARGET_DIR/.bash_profile
+  cp -f -R $SRC_DIR/atom/ $TARGET_DIR/.atom
   echo "Done."
 else
   echo "Canceled."
