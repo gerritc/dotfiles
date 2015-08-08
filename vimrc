@@ -11,3 +11,8 @@ set softtabstop=2
 " automatically wrap left and right
 set whichwrap+=<,>,h,l,[,]
 
+" if terminal is not set to solarized
+" let g:solarized_termcolors=256
+" set solarized colorscheme
+set background=dark
+colorscheme solarized
