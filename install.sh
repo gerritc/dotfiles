@@ -31,6 +31,8 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   cp -f $SRC_DIR/home/vimrc $TARGET_DIR/.vimrc
   cp -f -R $SRC_DIR/atom/ $TARGET_DIR/.atom
   mkdir -p $TARGET_DIR/.vim/colors
+  cp -f $SRC_DIR/vim/colors/molokai/molokai.vim $TARGET_DIR/.vim/colors/molokai.vim
+  cp -f $SRC_DIR/vim/colors/solarized/solarized.vim $TARGET_DIR/.vim/colors/solarized.vim
 
 if [ -f "$TARGET_DIR/.bash_profile" ] && grep -Fxq ". .bash_additions" $TARGET_DIR/.bash_profile; then
     echo "Includes already present."
