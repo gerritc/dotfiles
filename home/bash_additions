@@ -4,7 +4,7 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 fi
 
 # OS X bash dir colors
-# export CLICOLOR=YES
+export CLICOLOR=YES
 
 # add Java home
 export JAVA_HOME=$(/usr/libexec/java_home)
