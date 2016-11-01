@@ -34,11 +34,16 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   cp -f $SRC_DIR/vim/colors/molokai/molokai.vim $TARGET_DIR/.vim/colors/molokai.vim
   cp -f $SRC_DIR/vim/colors/solarized/solarized.vim $TARGET_DIR/.vim/colors/solarized.vim
 
-if [ -f "$TARGET_DIR/.bash_profile" ] && grep -Fxq ". .bash_additions" $TARGET_DIR/.bash_profile; then
+if [ "$TARGET_DIR" == "$HOME" ]; then
+  BASH_ADDITIONS="~/.bash_additions"
+else
+  BASH_ADDITIONS="$TARGET_DIR/.bash_additions"
+fi
+if [ -f "$TARGET_DIR/.bash_profile" ] && grep -Fxq ". $BASH_ADDITIONS" $TARGET_DIR/.bash_profile; then
     echo "Includes already present."
 else
     echo "Adding includes to $TARGET_DIR/.bash_profile"
-    echo ". .bash_additions" >> $TARGET_DIR/.bash_profile
+    echo ". $BASH_ADDITIONS" >> $TARGET_DIR/.bash_profile
 fi
   
   # cp -f $SRC_DIR/vim/colors/solarized/solarized.vim $TARGET_DIR/.vim/colors/
