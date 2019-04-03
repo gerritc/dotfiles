@@ -1,6 +1,5 @@
 [user]
-	email = gerritkopp@gmail.com
-	name = Gerrit Kopp
+	email = gerrit@collienne.de
+	name = Gerrit Collienne
 [push]
         default = simple
-
