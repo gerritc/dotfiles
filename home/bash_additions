@@ -91,3 +91,7 @@ shopt -s nocaseglob;
 
 # Autocorrect typos in path names when using `cd`
 shopt -s cdspell;
+
+# Some useful aliases
+alias l='ls'
+alias ll='ls -lah'
